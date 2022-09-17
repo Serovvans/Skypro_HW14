@@ -5,6 +5,11 @@ from db_data_access import *
 app = Flask(__name__)
 
 
+@app.route("/")
+def page_index():
+    return "Hello"
+
+
 @app.route("/movie/<title>")
 def get_film_by_title(title: str):
     film = search_by_name(title=title)

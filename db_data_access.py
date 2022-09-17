@@ -3,7 +3,7 @@ import sqlite3
 from typing import Dict, List, Set
 
 # Подключение к базе данных
-connection = sqlite3.connect("netflix.db")
+connection = sqlite3.connect("netflix.db", check_same_thread=False)
 cursor = connection.cursor()
 
 
